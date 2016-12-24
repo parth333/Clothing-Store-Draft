@@ -8,11 +8,29 @@
 </head>
 <body>
 <form action="">
+
+?????
+ <!--<font color="blue"><c:out value="${items}"/> -->
+
+	 while (<c:out value="${items}"/>.next()){
+	 	String clothing = <c:out value="${items}"/>.getString("item");
+	 <option value = clothing> clothing </option>
+
+<!--
+  while (rset.next()) {  // list all the authors
+            String author = rset.getString("author");
+            out.println("<option value='" + author + "'>" + author + "</option>");
+         }
+         out.println("</select><br />");
+         out.println("<p>OR</p>");
+-->
+?????? 
 Item:<select >
+<option>Select...</option>
 <option>shirt</option>
 <option>pant</option>
 <option>tie</option>
-<option>coat</option>
+
 </select>
 Quantity:
 <!--  
