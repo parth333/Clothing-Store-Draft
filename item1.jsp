@@ -42,8 +42,12 @@ Quantity:
 </select>
 
 -->
+	
+<input type='text' name='search' />	
+<!--
 <input type ="text" placeholder="input number">
 <br><br>
+-->
 <input type ="submit" value="Confirm"/>
 </form>
 </body>
