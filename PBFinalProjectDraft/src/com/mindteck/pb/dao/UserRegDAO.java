@@ -8,13 +8,13 @@ import com.mindteck.pb.exception.ApplicationException;
 
 public class UserRegDAO {
 	
-	public boolean insertNewUser(String userID, String name, String pass) throws ApplicationException {
+	public boolean insertNewUser(String userId, String name, String pass) throws ApplicationException {
 		//User user = null;
 
 		try (Connection connection = DBConnection.getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO user values (?,?,?)");){
-			statement.setString(1, userID);
+						.prepareStatement("INSERT INTO users values (?,?,?)");){
+			statement.setString(1, userId);
 			statement.setString(2, name);
 			statement.setString(3, pass);
 			

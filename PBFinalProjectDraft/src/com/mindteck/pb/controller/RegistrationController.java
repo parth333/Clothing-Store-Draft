@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mindteck.pb.dto.User;
+import com.mindteck.pb.dto.Users;
 import com.mindteck.pb.exception.ApplicationException;
 import com.mindteck.pb.service.UserRegService;
 

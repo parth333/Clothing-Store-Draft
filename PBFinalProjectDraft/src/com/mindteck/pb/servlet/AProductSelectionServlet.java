@@ -9,33 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mindteck.pb.controller.LoginController;
 import com.mindteck.pb.controller.ProductSelectionController;
 
-//@WebServlet("/login")
-public class ALoginServlet extends HttpServlet {
+public class AProductSelectionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	public ALoginServlet(){
+	public AProductSelectionServlet(){
 		super();
 	}
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
-		String action = req.getParameter("tryLogin");
+		// no use of req and res
 		
-		if(action != null && action.equalsIgnoreCase("login")){
-			new LoginController().processRequest(req, res);
-		//	new ProductSelectionController().processDB(req,res);
+		new ProductSelectionController().processDB(req,res);
 
-		}
-		else{
-			req.setAttribute("error", "back-end error from ALoginServlet");
-			RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
-			rd.forward(req, res);
-		}
+		
 	}
-
+	
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		doGet(req, res);
 	}
